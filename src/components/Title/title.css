@@ -10,7 +10,7 @@
   backdrop-filter: blur(8px);
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
   text-align: center;
-  animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
