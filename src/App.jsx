@@ -1,4 +1,3 @@
-import React, { useMemo } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Bubble from "./components/Bubble/Bubble";
