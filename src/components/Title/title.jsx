@@ -10,10 +10,12 @@ export default function Title() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <h1 className="title">Parva Thakkar</h1>
-      <p className="subtitle">
-        Full-Stack Developer &amp; Machine Learning Engineer
-      </p>
+      <div className="title-content">
+        <h1 className="title">Parva Thakkar</h1>
+        <p className="subtitle">
+          Full-Stack Developer & Machine Learning Engineer
+        </p>
+      </div>
     </motion.div>
   );
 }

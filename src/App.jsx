@@ -8,6 +8,7 @@ import Experience from "./pages/Experience/experience";
 import Skills from "./pages/Skills/skills";
 import Contact from "./pages/Contact/contact";
 import Resume from "./pages/Resume/resume";
+import "./index.css";
 
 export default function App() {
   return (
