@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import Bubble from "./components/Bubble/Bubble";
+import Bubble from "./components/Bubble/bubble";
 import Title from "./components/Title/Title";
 import About from "./pages/About/about";
 import Projects from "./pages/Projects/projects";

@@ -1,14 +1,18 @@
-import react from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import HomeIcon from "@mui/icons-material/Home";
 import "./about.css";
 
 export default function About() {
+  const navigate = useNavigate();
+
   return (
     <div className="about_me-container">
       <div className="about_me-text">
-        <h1>Hello everyone, My name is Parva Thakkar. Nice to meet you!</h1>
+        <h1>Hello, My name is Parva Thakkar. Nice to meet you!</h1>
         <p>
           I am a <span className="software">Software Engineer</span> who
-          recently graudated from Toronto Metropoloitan University with a{" "}
+          recently graudated from Toronto Metropolitan University with a{" "}
           <span className="software">Computer Engineering</span> Degree
         </p>
         <p>
@@ -18,8 +22,7 @@ export default function About() {
           <ul>
             <li>Playing Soccer & Volleyball</li>
             <li>
-              Exploring the world within cybersecurity through games and
-              podcasts
+              Exploring the world of cybersecurity through games and podcasts
             </li>
             <li>Watching Netflix/Anime</li>
             <li>Playing the mini games on New York Times</li>
@@ -29,6 +32,11 @@ export default function About() {
           I am always looking for new opportunities to learn and grow, so feel
           free to reach out!
         </p>
+        <div className="button" onClick={() => navigate(`/`)}>
+          <Button variant="contained" endIcon={<HomeIcon />}>
+            Back Home
+          </Button>
+        </div>
       </div>
       <div className="my-picture">
         <img src="public/beave.JPG" alt="My Picture" />
