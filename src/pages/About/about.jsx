@@ -39,7 +39,7 @@ export default function About() {
         </div>
       </div>
       <div className="my-picture">
-        <img src="public/beave.JPG" alt="My Picture" />
+        <img src="/beave.JPG" alt="My Picture" />
       </div>
     </div>
   );
