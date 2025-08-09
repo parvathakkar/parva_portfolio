@@ -31,6 +31,13 @@ export default function Projects() {
       imageUrl:
         "https://www.health.com/thmb/GlslebWLT9DwbeA_QCL1gh3aqkE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/cbt-GettyImages-1368430888-4f6382a186b046ebbc030765d28a86c4.jpg",
     },
+    {
+      id: 4,
+      title: "Book Store Inventory System",
+      description: "A system to manage book inventory for a bookstore",
+      imageUrl:
+        "https://image.freepik.com/free-photo/stack-books-library_42493-283.jpg",
+    },
   ];
 
   return (
