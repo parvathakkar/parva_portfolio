@@ -91,7 +91,6 @@ export default function Projects() {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "text.info",
                     fontWeight: 800,
                     marginTop: 2,
                     color: "Black",
