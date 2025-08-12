@@ -1,3 +1,138 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+.bubbles-container {
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 25%,
+    #0f3460 50%,
+    #16213e 75%,
+    #1a1a2e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.bubbles-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      2px 2px at 10% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 30% 10%,
+      rgba(255, 255, 255, 0.7),
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 70% 30%,
+      rgba(255, 255, 255, 0.8),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 90% 50%,
+      rgba(255, 255, 255, 0.6),
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 20% 80%,
+      rgba(255, 255, 255, 0.9),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 50% 90%,
+      rgba(255, 255, 255, 0.7),
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 80% 70%,
+      rgba(255, 255, 255, 0.8),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 40% 60%,
+      rgba(255, 255, 255, 0.5),
+      transparent 50%
+    );
+  background-size: 300px 300px;
+  animation: sparkleMove 8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes sparkleMove {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateX(-10px) translateY(-15px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(15px) translateY(-5px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(-5px) translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+}
+
+html,
+body,
+#root .app-container {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+}
+
+.title-container {
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .title-frame {
   position: absolute;
   top: 2rem;
@@ -11,6 +146,7 @@
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
   text-align: center;
   animation: glow 2s ease-in-out infinite alternate;
+  z-index: 2;
 }
 
 @keyframes glow {
@@ -25,11 +161,11 @@
 .title-frame .title {
   margin: 0;
   font-size: 5rem;
-  color: #000;
+  color: #eba63f;
 }
 
 .title-frame .subtitle {
   margin: 0.25rem 0 0;
   font-size: 1.5rem;
-  color: #000;
+  color: #eba63f;
 }

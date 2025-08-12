@@ -2,31 +2,108 @@
 
 .project-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #b4d0e7 0%, #a8c8e4 50%, #9cc0e0 100%);
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 25%,
+    #0f3460 50%,
+    #16213e 75%,
+    #1a1a2e 100%
+  );
+  background-size: 400% 400%;
   background-attachment: fixed;
+  animation: gradientShift 12s ease infinite;
   padding: 4rem 2rem;
   font-family: "Poppins", sans-serif;
   position: relative;
   justify-items: center;
+  overflow-x: hidden;
 }
 
 .project-container::before {
   content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(
-      circle at 20% 50%,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      2px 2px at 10% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 50%
     ),
     radial-gradient(
-      circle at 80% 20%,
-      rgba(97, 8, 43, 0.02) 1px,
-      transparent 1px
+      1px 1px at 30% 10%,
+      rgba(255, 255, 255, 0.7),
+      transparent 50%
+    ),
+    radial-gradient(
+      3px 3px at 70% 30%,
+      rgba(255, 255, 255, 0.8),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 90% 50%,
+      rgba(255, 255, 255, 0.6),
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 20% 80%,
+      rgba(255, 255, 255, 0.9),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 50% 90%,
+      rgba(255, 255, 255, 0.7),
+      transparent 50%
+    ),
+    radial-gradient(
+      2px 2px at 80% 70%,
+      rgba(255, 255, 255, 0.8),
+      transparent 50%
+    ),
+    radial-gradient(
+      1px 1px at 40% 60%,
+      rgba(255, 255, 255, 0.5),
+      transparent 50%
     );
-  background-size: 60px 60px, 40px 40px;
+  background-size: 300px 300px;
+  animation: sparkleMove 8s linear infinite;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes sparkleMove {
+  0% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateX(-10px) translateY(-15px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(15px) translateY(-5px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateX(-5px) translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+    opacity: 0.7;
+  }
 }
 
 @keyframes fadeInUp {
@@ -44,30 +121,19 @@
   text-align: center;
   margin-bottom: 4rem;
   animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 .project-page-title h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
-  color: #61082b;
-  background: linear-gradient(135deg, #61082b, #8b1538);
+  background: #eba63f;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
   margin-bottom: 2rem;
-}
-
-.project-page-title h1::after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #61082b, transparent, #61082b);
-  border-radius: 2px;
 }
 
 .projects-list {
@@ -80,6 +146,8 @@
   padding: 0 1rem;
   justify-content: center;
   justify-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .projects-list .MuiCard-root {
