@@ -90,7 +90,12 @@ export default function Projects() {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: "text.info", fontWeight: 800, marginTop: 2 }}
+                  sx={{
+                    color: "text.info",
+                    fontWeight: 800,
+                    marginTop: 2,
+                    color: "Black",
+                  }}
                 >
                   {project.status}
                 </Typography>
