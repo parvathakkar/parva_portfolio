@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="about_me-container">
       <div className="about_me-text">
-        <h1>Hello, My name is Parva Thakkar. Nice to meet you!</h1>
+        <h1>Hello, My Name Is Parva Thakkar. Nice To Meet You!</h1>
         <p>
           I am a <span className="software">Software Engineer</span> who
           recently graudated from Toronto Metropolitan University with a{" "}

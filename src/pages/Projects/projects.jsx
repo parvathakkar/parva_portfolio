@@ -69,7 +69,7 @@ export default function Projects() {
   return (
     <div className="project-container">
       <div className="project-page-title">
-        <h1>Here are some things that I have worked on!</h1>
+        <h1>These Are Some Projects That I Have Worked On!</h1>
       </div>
       <div className="projects-list">
         {projects.map((project) => (
