@@ -1,5 +1,4 @@
 html,
-body,
 #root {
   margin: 0;
   padding: 0;
@@ -9,7 +8,8 @@ body,
   font-family: "Quicksand", sans-serif;
 }
 
-.bubbles-container {
+body {
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(
     135deg,
     #1a1a2e 0%,
@@ -19,17 +19,11 @@ body,
     #1a1a2e 100%
   );
   background-size: 400% 400%;
-  animation: gradientShift 12s ease infinite;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5rem;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  position: relative;
+  animation: gradientShift 15s ease infinite;
+  overflow-x: hidden;
 }
 
-.bubbles-container::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -80,6 +74,26 @@ body,
   animation: sparkleMove 8s linear infinite;
   pointer-events: none;
   z-index: 0;
+}
+
+.bubbles-container {
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 25%,
+    #0f3460 50%,
+    #16213e 75%,
+    #1a1a2e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
 }
 
 @keyframes gradientShift {
