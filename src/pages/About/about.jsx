@@ -32,6 +32,14 @@ export default function About() {
           I am always looking for new opportunities to learn and grow, so feel
           free to reach out!
         </p>
+        <div className="contact-info">
+          <p>
+            <span className="software">Email</span>: thakkarparva@outlook.com
+          </p>
+          <p>
+            <span className="software">Phone Number</span>: 647-767-4800
+          </p>
+        </div>
         <div className="button" onClick={() => navigate(`/`)}>
           <Button variant="contained" endIcon={<HomeIcon />}>
             Back Home

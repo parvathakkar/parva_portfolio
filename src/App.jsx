@@ -25,14 +25,7 @@ export default function App() {
 }
 
 function Home() {
-  const labels = [
-    "About",
-    "Projects",
-    "Experience",
-    "Skills",
-    "Contact",
-    "Resume",
-  ];
+  const labels = ["About", "Projects", "Experience", "Skills", "Resume"];
 
   const navigate = useNavigate();
 
