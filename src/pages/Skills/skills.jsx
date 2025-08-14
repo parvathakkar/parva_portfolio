@@ -36,6 +36,8 @@ export default function Skills() {
     { src: "/icons/anth.png", alt: "Claude" },
     { src: "/icons/cop.png", alt: "copilot" },
     { src: "/icons/deepseek.png", alt: "deepseek" },
+    { src: "/icons/tensor.png", alt: "tensorflow" },
+    { src: "/icons/torch.png", alt: "pytorch" },
   ];
 
   const navigate = useNavigate();
@@ -85,7 +87,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="aitools-container">
-        <h1>AI Tools</h1>
+        <h1>AI/ML Tools</h1>
         <div className="front-icons-container">
           {Aitools.map((icon) => (
             <img
