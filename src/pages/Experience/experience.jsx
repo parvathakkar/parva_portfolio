@@ -6,7 +6,9 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Experience = () => {
   const navigate = useNavigate();
-
+  const handleBackHome = () => {
+    navigate("/");
+  };
   return (
     <div className="exp-container">
       <h1>My Experience</h1>
@@ -41,7 +43,7 @@ const Experience = () => {
           </ul>
         </div>
       </div>
-      <div className="button" onClick={() => navigate(`/`)}>
+      <div className="button" onClick={() => handleBackHome()}>
         <Button variant="contained" endIcon={<HomeIcon />}>
           Back Home
         </Button>

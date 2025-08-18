@@ -1,6 +1,6 @@
-import react from "react";
+import React from "react";
 import "./projects.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import Card from "@mui/material/Card";
@@ -9,7 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
-export default function Projects() {
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -22,8 +22,8 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Hotel/Restaraunt Finder",
-      description: "Find open restaraunts and hotels near you",
+      title: "Hotel/Restaurant Finder",
+      description: "Find open restaurants and hotels near you",
       imageUrl:
         "https://techcrunch.com/wp-content/uploads/2015/08/shutterstock_237882754.jpg?resize=1200,800",
       status: "Completed",
@@ -56,7 +56,7 @@ export default function Projects() {
     },
     {
       id: 6,
-      title: "Springboot Banking System",
+      title: "Spring Boot Banking System",
       description: "A banking system built with Spring Boot",
       imageUrl:
         "https://dashboard.thefinanser.com/wp-content/uploads/2021/09/bank.jpeg",
@@ -65,12 +65,16 @@ export default function Projects() {
   ];
 
   const navigate = useNavigate();
+  const handleBackHome = () => {
+    navigate("/");
+  };
 
   return (
     <div className="project-container">
       <div className="project-page-title">
         <h1>These Are Some Projects That I Have Worked On!</h1>
       </div>
+
       <div className="projects-list">
         {projects.map((project) => (
           <Card key={project.id} sx={{ maxWidth: 345 }}>
@@ -93,7 +97,7 @@ export default function Projects() {
                   sx={{
                     fontWeight: 800,
                     marginTop: 2,
-                    color: "Black",
+                    color: "black",
                   }}
                 >
                   {project.status}
@@ -103,7 +107,8 @@ export default function Projects() {
           </Card>
         ))}
       </div>
-      <div className="button" onClick={() => navigate(`/`)}>
+
+      <div className="button" onClick={() => handleBackHome()}>
         <Button
           variant="contained"
           endIcon={<HomeIcon />}
@@ -114,4 +119,6 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+};
+
+export default Projects;
