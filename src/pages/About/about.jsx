@@ -1,19 +1,22 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import "./about.css";
 
-export default function About() {
+const About = () => {
   const navigate = useNavigate();
-
+  const handleBackHome = () => {
+    navigate("/");
+  };
   return (
     <div className="about_me-container">
       <div className="about_me-text">
         <h1>Hello, My Name Is Parva Thakkar. Nice To Meet You!</h1>
         <p>
           I am a <span className="software">Software Engineer</span> who
-          recently graudated from Toronto Metropolitan University with a{" "}
-          <span className="software">Computer Engineering</span> Degree
+          recently graduated from Toronto Metropolitan University with a{" "}
+          <span className="software">Computer Engineering</span> Degree.
         </p>
         <p>
           My passions outside of the world of development and creation include:
@@ -28,10 +31,12 @@ export default function About() {
             <li>Playing the mini games on New York Times</li>
           </ul>
         </div>
+
         <p className="last-text">
           I am always looking for new opportunities to learn and grow, so feel
           free to reach out!
         </p>
+
         <div className="contact-info">
           <p>
             <span className="software">Email</span>: thakkarparva@outlook.com
@@ -40,7 +45,8 @@ export default function About() {
             <span className="software">Phone Number</span>: 647-767-4800
           </p>
         </div>
-        <div className="button" onClick={() => navigate(`/`)}>
+
+        <div className="button" onClick={() => handleBackHome()}>
           <Button variant="contained" endIcon={<HomeIcon />}>
             Back Home
           </Button>
@@ -51,4 +57,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default About;
