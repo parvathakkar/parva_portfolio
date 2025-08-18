@@ -14,7 +14,7 @@
   font-weight: 700;
 }
 
-img {
+.work-title img {
   width: 200px;
   height: 200px;
 }
@@ -30,7 +30,7 @@ img {
   justify-content: space-around;
   padding: 2rem;
   width: 70%;
-  border: 2px solid #11f524;
+  border: 2px solid #eba63f;
   border-radius: 50px;
 }
 

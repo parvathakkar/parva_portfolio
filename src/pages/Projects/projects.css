@@ -4,7 +4,6 @@
   min-height: 100vh;
   animation: gradientShift 12s ease infinite;
   padding: 4rem 2rem;
-  font-family: "Poppins", sans-serif;
   position: relative;
   justify-items: center;
   overflow-x: hidden;
@@ -32,11 +31,7 @@
 .project-page-title h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
-  background: #eba63f;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  position: relative;
+  color: #eba63f;
   margin-bottom: 2rem;
 }
 
