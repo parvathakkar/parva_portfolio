@@ -1,11 +1,12 @@
-import react from "react";
+import React from "react";
 import "./experience.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 
-export default function Experience() {
+const Experience = () => {
   const navigate = useNavigate();
+
   return (
     <div className="exp-container">
       <h1>My Experience</h1>
@@ -20,8 +21,9 @@ export default function Experience() {
           <ul>
             <li>
               Contributed to the planning, design, and implementation of Java
-              Components that improved weather forecasting accuracy, optimized
-              metadata services, and significantly reduced data processing times
+              components that improved weather forecasting accuracy, optimized
+              metadata services, and significantly reduced data processing
+              times.
             </li>
             <li>
               Led testing efforts using Docker, automated API testing with
@@ -30,11 +32,11 @@ export default function Experience() {
             </li>
             <li>
               Engineered and maintained Jenkins CI/CD pipelines to automate
-              build, test, and deployment workflows
+              build, test, and deployment workflows.
             </li>
             <li>
               Collaborated in Agile SDLC processes to streamline development and
-              reduce delivery times
+              reduce delivery times.
             </li>
           </ul>
         </div>
@@ -46,4 +48,6 @@ export default function Experience() {
       </div>
     </div>
   );
-}
+};
+
+export default Experience;

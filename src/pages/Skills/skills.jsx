@@ -41,7 +41,9 @@ const Aitools = [
 
 const Skills = () => {
   const navigate = useNavigate();
-
+  const handleBackHome = () => {
+    navigate("/");
+  };
   return (
     <div className="skills-container">
       <div className="skills-title">
@@ -104,7 +106,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="button" onClick={() => navigate(`/`)}>
+      <div className="button" onClick={() => handleBackHome()}>
         <Button variant="contained" endIcon={<HomeIcon />}>
           Back Home
         </Button>

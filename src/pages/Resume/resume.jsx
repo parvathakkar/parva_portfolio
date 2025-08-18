@@ -16,7 +16,6 @@ const Resume = () => {
       <header className="resume-title">
         <h1>You Can View My Resume Below!</h1>
       </header>
-
       <div className="actual-resume">
         <iframe
           src="/Parva_Thakkar_Resume.pdf"
