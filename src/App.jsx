@@ -10,7 +10,7 @@ import Contact from "./pages/Contact/contact";
 import Resume from "./pages/Resume/resume";
 import "./index.css";
 
-export default function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,9 +22,9 @@ export default function App() {
       <Route path="/resume" element={<Resume />} />
     </Routes>
   );
-}
+};
 
-function Home() {
+const Home = () => {
   const labels = ["About", "Projects", "Experience", "Skills", "Resume"];
 
   const navigate = useNavigate();
@@ -45,4 +45,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
