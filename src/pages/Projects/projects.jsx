@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Therapist and Patient Engagement Detector",
       description:
         "Provides visual and quantitative feedback to therapists on how engaged their patients are during sessions",
-      src: "https://www.health.com/thmb/GlslebWLT9DwbeA_QCL1gh3aqkE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/cbt-GettyImages-1368430888-4f6382a186b046ebbc030765d28a86c4.jpg",
+      src: "/therapy.jpg",
       status: "Completed",
     },
     {
