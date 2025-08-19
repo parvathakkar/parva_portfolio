@@ -18,6 +18,7 @@ const Projects = () => {
         "Assistant to help you find the best odds across multiple sportsbooks",
       src: "/bet.png",
       status: "Completed",
+      link: "https://github.com/parvathakkar/sportsbook_assistant",
     },
     {
       id: 2,
@@ -25,6 +26,7 @@ const Projects = () => {
       description: "Find open restaurants and hotels near you",
       src: "/res.jpg",
       status: "Completed",
+      link: "https://github.com/parvathakkar/Hotel-Restaraunt_Finder",
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ const Projects = () => {
         "Provides visual and quantitative feedback to therapists on how engaged their patients are during sessions",
       src: "/therapy.jpg",
       status: "Completed",
+      link: "https://drive.google.com/file/d/1mmlqIMStPqX0_TjTg6SwkkxJ1J23-6_9/view?usp=sharing",
     },
     {
       id: 4,
@@ -40,6 +43,7 @@ const Projects = () => {
       description: "A system to manage book inventory for a bookstore",
       src: "/books.jpeg",
       status: "Completed",
+      link: "https://github.com/parvathakkar/book_store_application",
     },
     {
       id: 5,
@@ -72,32 +76,39 @@ const Projects = () => {
       <div className="projects-list">
         {projects.map((project) => (
           <Card key={project.id} sx={{ maxWidth: 345 }}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="140"
-                image={project.src}
-                alt={project.title}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {project.title}
-                </Typography>
-                <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                  {project.description}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 800,
-                    marginTop: 2,
-                    color: "black",
-                  }}
-                >
-                  {project.status}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={project.src}
+                  alt={project.title}
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                    {project.description}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontWeight: 800,
+                      marginTop: 2,
+                      color: "black",
+                    }}
+                  >
+                    {project.status}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </a>
           </Card>
         ))}
       </div>
