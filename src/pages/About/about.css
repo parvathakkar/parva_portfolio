@@ -7,34 +7,35 @@
   transition: all 0.2s ease;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .about_me-container {
+  --pad-block: 3rem;
+  --pad-inline: 4rem;
+  --gap: 6rem;
+  --pic-w: 480px;
+  --text-max: 850px;
+  --h1-size: clamp(2.5rem, 5vw, 4.5rem);
+  --h1-mb: 2.5rem;
+  --last-pt: 2rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 6rem;
+  gap: var(--gap);
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  min-height: 100vh;
-  padding: 3rem 4rem;
+  min-height: 100svh;
+  padding: var(--pad-block) var(--pad-inline);
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 .my-picture {
   flex: 0 0 auto;
-  width: 480px;
+  width: var(--pic-w);
   position: relative;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -50,7 +51,6 @@
   border-radius: 3rem;
   filter: brightness(1.05) contrast(1.1);
 }
-
 .my-picture img:hover {
   transform: scale(1.02);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2), 0 15px 35px rgba(97, 8, 43, 0.15);
@@ -58,16 +58,16 @@
 
 .about_me-text {
   flex: 1;
-  max-width: 850px;
+  max-width: var(--text-max);
   color: #eba63f;
   line-height: 1.7;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .about_me-container h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: var(--h1-size);
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--h1-mb);
   line-height: 1.1;
   background: #eba63f;
   background-clip: text;
@@ -93,33 +93,51 @@ p {
 }
 
 .last-text {
-  padding-top: 2rem;
+  padding-top: var(--last-pt);
+}
+
+@media (max-width: 900px), (max-height: 700px) {
+  .about_me-container {
+    height: 100svh;
+    overflow-y: auto;
+  }
+  @supports (height: 100dvh) {
+    .about_me-container {
+      height: 100dvh;
+    }
+  }
+  @supports not (height: 100svh) {
+    .about_me-container {
+      height: 100vh;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   .about_me-container {
     flex-direction: column;
-    gap: 3rem;
     text-align: center;
-    padding: 3rem 1.5rem;
+    --gap: 3rem;
+    --pad-inline: 1.5rem;
   }
   .my-picture {
-    width: 380px;
+    --pic-w: 380px;
     order: 2;
   }
   .about_me-text {
     order: 1;
-    max-width: 700px;
+    --text-max: 700px;
   }
 }
 
 @media (max-width: 768px) {
   .about_me-container {
-    gap: 2rem;
-    padding: 2rem 1rem;
+    --gap: 2rem;
+    --pad-block: 2rem;
+    --pad-inline: 1rem;
   }
   .my-picture {
-    width: 300px;
+    --pic-w: 300px;
   }
   .last-text {
     margin-top: 2rem;
@@ -127,10 +145,37 @@ p {
 }
 
 @media (max-width: 480px) {
-  .my-picture {
-    width: 250px;
-  }
   .about_me-container {
-    padding: 1.5rem 0.75rem;
+    --pad-block: 1.5rem;
+    --pad-inline: 0.75rem;
+  }
+  .my-picture {
+    --pic-w: 250px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1920px) and (max-height: 1400px) {
+  .about_me-container {
+    height: 100svh;
+    overflow-y: auto;
+    --pad-block: 2.5rem;
+    --pad-inline: 3rem;
+    --gap: 4rem;
+  }
+  .about_me-container h1 {
+    --h1-size: clamp(2.3rem, 4vw, 4rem);
+    --h1-mb: 2rem;
+  }
+  .about_me-text {
+    --text-max: 820px;
+  }
+  .about_me-container p {
+    margin-bottom: 1.25rem;
+  }
+  .last-text {
+    --last-pt: 1.5rem;
+  }
+  .my-picture {
+    --pic-w: clamp(400px, 24vw, 460px);
   }
 }
