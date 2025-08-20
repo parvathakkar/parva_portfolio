@@ -115,6 +115,7 @@ const Projects = () => {
 
       <div className="button" onClick={() => handleBackHome()}>
         <Button
+          className="buttonn"
           variant="contained"
           endIcon={<HomeIcon />}
           sx={{ marginTop: 10 }}
