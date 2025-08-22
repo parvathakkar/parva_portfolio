@@ -6,7 +6,6 @@ import About from "./pages/About/about";
 import Projects from "./pages/Projects/projects";
 import Experience from "./pages/Experience/experience";
 import Skills from "./pages/Skills/skills";
-import Contact from "./pages/Contact/contact";
 import Resume from "./pages/Resume/resume";
 import "./index.css";
 
@@ -18,7 +17,6 @@ const App = () => {
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
       <Route path="/skills" element={<Skills />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="/resume" element={<Resume />} />
     </Routes>
   );
