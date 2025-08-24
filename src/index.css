@@ -126,7 +126,7 @@ body::before {
   animation: gradientShift 12s ease infinite;
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 8rem;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -208,7 +208,7 @@ body::before {
     display: grid;
     margin-top: 170px;
     grid-template-columns: 1fr 1fr;
-    row-gap: 6rem;
+    row-gap: 8rem;
     background: transparent;
     justify-items: center;
     width: 100%;

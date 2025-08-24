@@ -6,7 +6,6 @@ import About from "./pages/About/about";
 import Projects from "./pages/Projects/projects";
 import Experience from "./pages/Experience/experience";
 import Skills from "./pages/Skills/skills";
-import Resume from "./pages/Resume/resume";
 import "./index.css";
 
 const App = () => {
@@ -17,13 +16,12 @@ const App = () => {
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
       <Route path="/skills" element={<Skills />} />
-      <Route path="/resume" element={<Resume />} />
     </Routes>
   );
 };
 
 const Home = () => {
-  const labels = ["About", "Projects", "Experience", "Skills", "Resume"];
+  const labels = ["About", "Projects", "Experience", "Skills"];
 
   const navigate = useNavigate();
 
