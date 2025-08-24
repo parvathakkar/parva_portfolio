@@ -42,24 +42,37 @@
 @media (min-width: 340px) and (max-width: 415px) {
   .title-frame {
     width: auto;
+    margin-top: 0px;
   }
   .title-frame .title {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .title-frame .subtitle {
+    font-size: 1rem;
+    color: #eba63f;
   }
 }
 
 @media (min-width: 416px) and (max-width: 830px) {
   .title-frame {
     width: auto;
+    margin-top: 0px;
   }
   .title-frame .title {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  .title-frame .subtitle {
+    font-size: 1.2rem;
+    color: #eba63f;
   }
 }
 
 @media (min-width: 840px) and (max-width: 1022px) {
   .title-frame {
     width: auto;
+    margin-top: 100px;
   }
   .title-frame .title {
     font-size: 5.5rem;

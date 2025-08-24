@@ -15,7 +15,9 @@ export default function Bubble({ label, onClick }) {
 
   return (
     <div ref={bubbleRef} className="bubble" onClick={handleClick}>
-      {label}
+      <p style={{ color: "black", marginTop: "20px", fontWeight: "1000" }}>
+        {label}
+      </p>
     </div>
   );
 }
