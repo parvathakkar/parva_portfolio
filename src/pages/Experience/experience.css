@@ -7,40 +7,256 @@
   padding: 2rem;
   animation: fadeInUp 0.8s ease-out;
 }
-
 .exp-container h1 {
   color: #eba63f;
   font-size: clamp(1.5rem, 3vw, 5rem);
   font-weight: 700;
 }
-
 .work-title img {
   width: 200px;
   height: 200px;
 }
-
 .work-title {
   width: 45%;
 }
-
 .work-container {
-  display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  padding: 2rem;
   width: 70%;
   border: 2px solid #eba63f;
   border-radius: 50px;
 }
-
 .work-duties {
-  color: white;
+  color: #fff;
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 400;
   line-height: 1.6;
 }
-
 li {
   margin-bottom: 30px;
+}
+@media (min-width: 1920px) and (max-width: 2000px) {
+  .exp-container,
+  .work-container {
+    gap: 6rem;
+  }
+  .work-container {
+    width: 80%;
+  }
+  .work-title img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .exp-container h1 {
+    font-size: clamp(4rem, 4vw, 4rem);
+  }
+  .exp-container li,
+  p {
+    font-size: clamp(1.8rem, 2vw, 1.5rem);
+  }
+  .exp-container,
+  .work-container {
+    gap: 8rem;
+    padding: 2rem;
+  }
+  .work-container {
+    width: 100%;
+  }
+  .work-title img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
+  .exp-container {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .exp-container,
+  .work-container {
+    gap: 7rem;
+    padding: 1.5rem;
+  }
+  .work-container {
+    width: 85%;
+  }
+  .work-title img {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px) {
+  .exp-container {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .exp-container,
+  .work-container {
+    gap: 8rem;
+    padding: 1rem;
+  }
+  .work-container {
+    width: 90%;
+  }
+  .work-title img {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (min-width: 340px) and (max-width: 600px) {
+  .exp-container {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .exp-container,
+  .work-container {
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .work-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 95%;
+  }
+  .work-title {
+    width: 100%;
+    text-align: center;
+  }
+  .work-title img {
+    width: 120px;
+    height: 120px;
+  }
+  .work-duties {
+    padding: 0 20px;
+    text-align: left;
+    width: 100%;
+    max-width: fit-content;
+  }
+  .work-duties ul {
+    padding-left: 20px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .exp-container h1 {
+    font-size: clamp(4rem, 4vw, 4rem);
+  }
+  .exp-container li,
+  p {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+  .exp-container,
+  .work-container {
+    gap: 1rem;
+    padding: 1.7rem;
+  }
+  .work-container {
+    flex-direction: row;
+    width: 100%;
+  }
+  .work-title {
+    width: 60%;
+  }
+  .work-title img {
+    width: 150px;
+    height: 150px;
+  }
+  .work-duties {
+    width: 60%;
+    text-align: left;
+  }
+}
+@media (min-width: 801px) and (max-width: 819px) {
+  .exp-container li,
+  p {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+  .exp-container h1 {
+    font-size: clamp(4rem, 4vw, 4rem);
+  }
+  .exp-container,
+  .work-container {
+    gap: 9rem;
+    padding: 1.5rem;
+  }
+  .work-container {
+    flex-direction: row;
+    width: 100%;
+    margin-top: -6rem;
+  }
+  .work-title {
+    width: 45%;
+  }
+  .work-title img {
+    width: 160px;
+    height: 160px;
+  }
+  .work-duties {
+    width: 55%;
+    text-align: left;
+  }
+}
+@media (min-width: 820px) and (max-width: 852px) {
+  .exp-container li,
+  p {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+  .exp-container h1 {
+    font-size: clamp(4rem, 4vw, 4rem);
+  }
+  .exp-container,
+  .work-container {
+    gap: 6rem;
+    padding: 1.5rem;
+  }
+  .work-container {
+    flex-direction: row;
+    width: 85%;
+    margin-top: -2rem;
+  }
+  .work-title {
+    width: 40%;
+  }
+  .work-title img {
+    width: 170px;
+    height: 170px;
+  }
+  .work-duties {
+    width: 60%;
+    text-align: left;
+  }
+}
+@media (min-width: 853px) and (max-width: 915px) {
+  .exp-container li,
+  p {
+    font-size: clamp(1.56rem, 2vw, 1.5rem);
+  }
+  .exp-container h1 {
+    font-size: clamp(4rem, 4vw, 4rem);
+  }
+  .exp-container,
+  .work-container {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  .work-container {
+    flex-direction: row;
+    width: 90%;
+    margin-top: -1.5rem;
+  }
+  .work-title {
+    width: 42%;
+  }
+  .work-title img {
+    width: 165px;
+    height: 165px;
+  }
+  .work-duties {
+    width: 58%;
+    text-align: left;
+  }
 }
