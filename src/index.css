@@ -140,6 +140,9 @@ body::before,
   .title-container {
     top: 1rem;
   }
+  .bubbles-container p {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 340px) and (max-width: 1022px) {

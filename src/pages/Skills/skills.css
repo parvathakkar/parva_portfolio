@@ -46,3 +46,96 @@
 .aitools-container h1 {
   color: #eba63f;
 }
+
+@media (min-width: 1920px) and (max-width: 2000px) {
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-title h1 {
+    font-size: clamp(1rem, 3vw, 5rem);
+  }
+
+  .frontend-container,
+  .backend-container,
+  .devtools-container,
+  .aitools-container {
+    padding: 0.5rem;
+  }
+
+  .icons {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icons:hover {
+    transform: scale(1.15) translateY(-8px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .skills-container {
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .frontend-container,
+  .backend-container,
+  .devtools-container,
+  .aitools-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .icons {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icons:hover {
+    transform: scale(1.15) translateY(-8px);
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1910px) {
+  .skills-container {
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .frontend-container,
+  .backend-container,
+  .devtools-container,
+  .aitools-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .icons {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icons:hover {
+    transform: scale(1.15) translateY(-8px);
+  }
+}

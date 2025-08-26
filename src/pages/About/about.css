@@ -96,7 +96,7 @@ p {
   padding-top: var(--last-pt);
 }
 
-@media (max-width: 900px), (max-height: 700px) {
+@media (max-width: 915px), (max-height: 700px) {
   .about_me-container {
     height: 100svh;
     overflow-y: auto;
