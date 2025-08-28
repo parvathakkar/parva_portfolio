@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15rem;
+  gap: 9rem;
   padding: 2rem;
   animation: fadeInUp 0.8s ease-out;
 }
@@ -27,6 +27,18 @@
   border: 2px solid #eba63f;
   border-radius: 50px;
 }
+
+.link-buttons {
+  display: flex;
+  gap: 14rem;
+}
+
+.link-buttons :hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 .work-duties {
   color: #fff;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -39,11 +51,17 @@ li {
 @media (min-width: 1920px) and (max-width: 2000px) {
   .exp-container,
   .work-container {
-    gap: 6rem;
+    gap: 2rem;
   }
   .work-container {
     width: 80%;
   }
+
+  .link-buttons img {
+    width: 100px;
+    height: 100px;
+  }
+
   .work-title img {
     width: 150px;
     height: 150px;
@@ -59,9 +77,15 @@ li {
   }
   .exp-container,
   .work-container {
-    gap: 8rem;
+    gap: 3rem;
     padding: 2rem;
   }
+
+  .link-buttons img {
+    width: 100px;
+    height: 100px;
+  }
+
   .work-container {
     width: 100%;
   }
@@ -116,6 +140,16 @@ li {
     gap: 2rem;
     padding: 1rem;
   }
+
+  .link-buttons {
+    gap: 4rem;
+  }
+
+  .link-buttons img {
+    width: 70px;
+    height: 70px;
+  }
+
   .work-container {
     flex-direction: column;
     text-align: center;
@@ -149,10 +183,20 @@ li {
   p {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
   }
+
+  .link-buttons {
+    gap: 6rem;
+  }
+
+  .link-buttons img {
+    width: 70px;
+    height: 70px;
+  }
+
   .exp-container,
   .work-container {
     gap: 1rem;
-    padding: 1.7rem;
+    padding: 1.4rem;
   }
   .work-container {
     flex-direction: row;
@@ -183,6 +227,7 @@ li {
     gap: 9rem;
     padding: 1.5rem;
   }
+
   .work-container {
     flex-direction: row;
     width: 100%;
@@ -208,10 +253,20 @@ li {
   .exp-container h1 {
     font-size: clamp(4rem, 4vw, 4rem);
   }
+
+  .link-buttons {
+    gap: 6rem;
+  }
+
+  .link-buttons img {
+    width: 90px;
+    height: 90px;
+  }
+
   .exp-container,
   .work-container {
-    gap: 6rem;
-    padding: 1.5rem;
+    gap: 5rem;
+    padding: 1rem;
   }
   .work-container {
     flex-direction: row;
@@ -236,11 +291,17 @@ li {
     font-size: clamp(1.56rem, 2vw, 1.5rem);
   }
   .exp-container h1 {
-    font-size: clamp(4rem, 4vw, 4rem);
+    font-size: clamp(3.8rem, 4vw, 4rem);
   }
+
+  .link-buttons img {
+    width: 85px;
+    height: 85px;
+  }
+
   .exp-container,
   .work-container {
-    gap: 2rem;
+    gap: 1.22rem;
     padding: 1.5rem;
   }
   .work-container {

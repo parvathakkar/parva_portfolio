@@ -43,6 +43,17 @@ const Experience = () => {
           </ul>
         </div>
       </div>
+      <div className="link-buttons">
+        <a
+          href="https://www.linkedin.com/in/parva-thakkar-7716701b0/"
+          target="_blank"
+        >
+          <img src="/icons/in.png" alt="github" />
+        </a>
+        <a href="https://github.com/parvathakkar" target="_blank">
+          <img src="/icons/github.png" alt="github" />
+        </a>
+      </div>
       <div className="button" onClick={() => handleBackHome()}>
         <Button variant="contained" endIcon={<HomeIcon />}>
           Back Home
