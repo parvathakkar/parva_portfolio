@@ -1,7 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Bubble from "./components/Bubble/bubble";
-import Title from "./components/Title/Title";
+import Title from "./components/Title/title";
 import About from "./pages/About/about";
 import Projects from "./pages/Projects/projects";
 import Experience from "./pages/Experience/experience";
