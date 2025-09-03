@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./Bubble.css";
+import "./bubble.css";
 
 export default function Bubble({ label, onClick }) {
   const bubbleRef = useRef(null);
