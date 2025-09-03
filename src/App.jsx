@@ -6,6 +6,7 @@ import About from "./pages/About/about";
 import Projects from "./pages/Projects/projects";
 import Experience from "./pages/Experience/experience";
 import Skills from "./pages/Skills/skills";
+import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 
 const App = () => {
@@ -39,6 +40,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <Analytics />
     </div>
   );
 };
