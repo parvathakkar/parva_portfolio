@@ -7,6 +7,12 @@
   padding: 2rem;
   animation: fadeInUp 0.8s ease-out;
 }
+
+.exp-container {
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .exp-container h1 {
   color: #eba63f;
   font-size: clamp(1.5rem, 3vw, 5rem);
