@@ -41,9 +41,6 @@ const About = () => {
           <p>
             <span className="software">Email</span>: thakkarparva@outlook.com
           </p>
-          <p>
-            <span className="software">Phone Number</span>: 647-767-4800
-          </p>
         </div>
 
         <div className="button" onClick={() => handleBackHome()}>
